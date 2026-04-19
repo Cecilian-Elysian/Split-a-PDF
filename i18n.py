@@ -79,5 +79,5 @@ def set_language(lang):
 def get_language():
     return _current_lang
 
-def t(key):
-    return TRANSLATIONS[_current_lang].get(key, key)
+def t(key: str) -> str:
+    return str(TRANSLATIONS[_current_lang].get(key, key))
